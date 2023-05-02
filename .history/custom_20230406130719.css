@@ -1,0 +1,29 @@
+:root.light {
+    --color-bg: #eeeff6;
+    --color-menu-text: #4d4d4d;
+    --color-page-bg: white;
+    --color-obj-bg: #f1f2f3;
+    --color-title-text: #4d4d4d;
+    --color-gen-text: #4d4d4d;
+    --color-menu-hover: darkgrey;
+    --color-title-hover: darkgrey;
+}
+
+:root.dark {
+    --color-bg: #212121;
+    --color-menu-text: #D3D3D3;
+    --color-page-bg: #333333;
+    --color-obj-bg: #403f3f;
+    --color-title-text: #D3D3D3;
+    --color-gen-text: white;
+    --color-menu-hover: grey;
+    --color-title-hover: grey;
+}
+
+h2 {
+    color: var(--color-gen-text);
+}
+
+p {
+    color: var(--color-gen-text);
+}

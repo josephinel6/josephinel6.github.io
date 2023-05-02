@@ -1,0 +1,46 @@
+# Weather API  
+  
+  
+  
+**Purpose:** Class assignment  
+**Link:** https://weatherapi.josephinemouse.repl.co/
+  
+This was my first attempt at working with APIs. I decided to create a simple project that could tell you the weather given the latitude and longitude inputed, and I added a background for the homepage using an API that returned random images.   
+  
+Of course, it would make more sense for the user to input a location and go through a geocoding API to get the latitude and longitude, but the only API I found for that which didn't require a key gave me a CORS error. To work around this error, I wanted to run the program from an origin, but because I wasn't using my personal computer for this project, I didn't have access to NPM in Visual Studio Code. The last resort was to create the whole project in Replit, but because this was my first time working with APIs, I decided it would be a better to learn the basics of using fetch() and parsing JSON objects first. Below are some examples of the program in action, as well as code samples.  
+\
+\
+!["homepage"](https://i.ibb.co/6WZYTWQ/weatherapi.png)  
+  
+The image above shows the homepage of the program. As you can see, there is a space for the user to input latitude and longitude. There is also an image background and a paintbrush icon in the bottom right corner that allows the user to change the background to another random image. This is done with the [Lorem Ipsum API](https://picsum.photos/), which allows you to put in parameters and returns a random image that fits the given height, width, etc. This API is used every time the page is loaded, as well as whenever the user clicks the paintbrush, allowing a random background to be displayed every time the site is accessed. The function for this is pretty simple:
+  
+```js
+function changebg() {
+    var num = Math.random()
+    document.body.style.backgroundImage = "url('https://picsum.photos/1920/1080?random=" + num + "')"
+}
+```
+\
+The following shows the weather actually being returned:  
+\
+![New Orleans Weather](https://i.ibb.co/cTHvRcV/weatherapi.png)  
+\
+As you can see, I opted for a pretty simple layout here, with just the weather in the center, a background, and a button to go back to the home screen (the x in the top left corner). Most of the code is as you'd expect:  
+
+```js
+function getweather() {
+    console.log("lagsdjk;f")
+    var lat = document.getElementById("latitude").value;
+    var long = document.getElementById("longitude").value;
+    console.log('https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + long + '&temperature_unit=fahrenheit' + '&current_weather=true')
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + long + '&temperature_unit=fahrenheit' + '&current_weather=true')
+         .then(response => response.json())
+         .then(response => {
+             weather.innerHTML = response.current_weather.temperature + "° F";
+         }
+}
+```  
+\
+There's more to the function, of course, but this is all that I think really needs to be seen. You might notice that this page also has a background--the majority of the getweather() function is dedicated to setting the background. I probably could've used an API for this, at the very least, but I choose to save, upload, and retrieve all of the photos manually instead. Looking back, this was not the best use of my time, but I think I'll save that knowledge for future projects.  
+\
+**Reflection:** I'm overall pretty happy with this project. Besides a few blurry backgrounds, the whole thing looks pretty clean and it does what I created it to do. It was a great way for me to learn how to use fetch APIs and it's been a good reference for future projects I've done using APIs. Despite having to simplify the idea due to CORS errors and the hour it took me to add all the weather backgrounds, I'd say it was a good start and an overall success for my original goal of learning to use APIs with JS.

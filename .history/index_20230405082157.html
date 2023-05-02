@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        :root.light {
+            --color-bg: white;
+            --color-menu-text: black;
+            --color-page-bg: darkgray;
+            --color-obj-bg: gray;
+            --color-title-text: black;
+            --color-gen-text: black;
+        }
+
+        :root.dark {
+            --color-bg: black;
+            --color-menu-text: white;
+            --color-page-bg: gray;
+            --color-obj-bg: darkgray;
+            --color-title-text: white;
+            --color-gen-text: white;
+        }
+
+        /* :root {
+            --color-bg: black;
+        } */
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            position: relative;
+            /* border-color: blue;
+            border-radius: 10px;
+            border-style: solid; */
+            padding: 0;
+        }
+
+        #menu {
+            height: 100%;
+            width: 20%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            background-color: var(--color-bg);
+        }
+
+        #topbar {
+            width: 100%;
+            height: 8%;
+            background-color: var(--color-bg);
+            position: absolute;
+        }
+
+        .menutext {
+            color: var(--color-menu-text);
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        .fa-github {
+            color: var(--color-menu-text);
+        }
+
+        #window {
+            background-color: var(--color-page-bg);
+            position: absolute;
+            height: 92%;
+            width: 80%;
+            right: 0;
+            bottom: 0;
+        }
+
+        .tabcontent {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .projectbutton {
+            height: 150px;
+            width: 95%;
+            margin-top: 2.5%;
+            margin-left: 2.5%;
+            background-color: var(--color-obj-bg);
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+
+        #day-night {
+            color: white;
+            z-index: 2;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+
+        /* .fa-2x {
+            height: 20px !important;
+        } */
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+        <div style="position:absolute; top: 8%; width: 100%; text-align: center;">
+
+            <p class="menutext"> Home </p>
+            <p class="menutext" onclick="openpage('projectbuttons')"> Projects </p>
+            <p class="menutext"> About </p>
+
+        </div>
+
+        <div style="position:absolute; bottom:3%; width: 100%; text-align: center;">
+            <a href="https://github.com/josephinel6" class="fa fa-github fa-2x" style="text-decoration: none;"></a>
+        </div>
+    </div>
+    <div id="topbar">
+        <i onclick="daynight()" class="fa fa-sun-o fa-lg" id="day-night"></i>
+    </div>
+    <div id="window">
+        <div id="homepage" class="tabcontent">
+            <h2> Projects </h2>
+        </div>
+        <div id="projectbuttons" class="tabcontent">
+            <div class="projectbutton" onclick="openpage('weatherAPI')"> Weather API </div>
+        </div>
+        <zero-md src="https://josephinel6.github.io/weatherAPI.md" class="tabcontent" id="weatherAPI"></zero-md>
+        <div class="tabcontent" id="about"></div>
+    </div>
+    <script>
+        var night;
+
+        window.onload = function () {
+            var night = true;
+            document.documentElement.classList.remove("light")
+            document.documentElement.classList.add("dark")
+            window.localStorage.setItem('mode', 'dark');
+            console.log("dark")
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById("homepage").style.display = "block";
+        }
+
+        function openpage(pageName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function daynight() {
+            var daynight = document.getElementById("daynight");
+            if (night == true) {
+                daynight.classList.remove("fa-sun-o");
+                daynight.classList.add("fa-moon-o");
+                night = false;
+                document.documentElement.classList.remove("dark")
+                document.documentElement.classList.add("light")
+                window.localStorage.setItem('mode', 'light');
+            }
+            else {
+                daynight.classList.add("fa-sun-o");
+                daynight.classList.remove("fa-moon-o");
+                night = true;
+                document.documentElement.classList.remove("light")
+                document.documentElement.classList.add("dark")
+                window.localStorage.setItem('mode', 'dark');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
