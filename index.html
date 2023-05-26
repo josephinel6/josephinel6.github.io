@@ -198,29 +198,30 @@
         </div>
         <div id="projectbuttons" class="tabcontent" style="margin-top:-1%">
 
-            <div class="projectbutton" onclick="openpage('customAPI')">
+            <div class="projectbutton" onclick="viewpage('customAPI')">
                 <h2 class="projectbuttontitle"> Custom API </h2>
                 <p class="projectbuttondesc"> Lorem impsum </p>
             </div>
-            <div class="projectbutton" onclick="openpage('bootstrapTest')">
+            <div class="projectbutton" onclick="viewpage('responsiveness')">
                 <h2 class="projectbuttontitle"> Responsiveness </h2>
                 <p class="projectbuttondesc"> Lorem impsum </p>
             </div>
-            <div class="projectbutton" onclick="openpage('makeupAPI')">
+            <div class="projectbutton" onclick="viewpage('makeupAPI')">
                 <h2 class="projectbuttontitle"> Makeup API </h2>
                 <p class="projectbuttondesc"> An experiment in dynamic elements </p>
             </div>
-            <div class="projectbutton" onclick="openpage('weatherAPI')">
+            <div class="projectbutton" onclick="viewpage('weatherAPI')">
                 <h2 class="projectbuttontitle"> Weather API </h2>
                 <p class="projectbuttondesc"> My first project with APIs. </p>
             </div>
         </div>
-        <zero-md src="https://josephinel6.github.io/weatherAPI.md" class="tabcontent markdownpg" id="weatherAPI">
+        <zero-md class="tabcontent markdownpg" id="viewmarkdown"></zero-md>
+        <!-- <zero-md src="https://josephinel6.github.io/weatherAPI.md" class="tabcontent markdownpg" id="weatherAPI">
 
 
-        </zero-md>
-        <zero-md src="https://josephinel6.github.io/makeupAPI.md" class="tabcontent markdownpg"
-            id="makeupAPI"></zero-md>
+        </zero-md> -->
+        <!-- <zero-md src="https://josephinel6.github.io/makeupAPI.md" class="tabcontent markdownpg"
+            id="makeupAPI"></zero-md>-->
         <div class="tabcontent" id="aboutpage">
             <zero-md src="https://josephinel6.github.io/about.md" class="markdownpg"></zero-md>
         </div>
@@ -240,6 +241,23 @@
                 window.localStorage.setItem('mode', 'dark');
                 console.log("dark")
                 document.getElementById("homepage").style.display = "block";
+            }
+
+            function viewpage(pageName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById("viewmarkdown").style.display = "block";
+                document.getElementById("viewmarkdown").src = "https://josephinel6.github.io/" + pageName + ".md";
+
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
             }
 
             function openpage(pageName) {
