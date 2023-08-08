@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="module" src="global.js"></script>
+    <script>
+        window.ZeroMdConfig = {
+            cssUrls: ['https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css@4/github-markdown.min.css',
+                'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css', "custom.css"]
+        }
+    </script>
+</head>
+
+<body>
+    <div id="frame-placeholder"></div>
+    <div id="window">
+        <div id="homepage" class="tabcontent">
+            <h2> Under construction </h2>
+        </div>
+        <!-- <div id="projectbuttons" class="tabcontent" style="margin-top:-1%">
+
+            <div class="projectbutton" onclick="viewpage('customAPI')">
+                <h2 class="projectbuttontitle"> Custom API </h2>
+                <p class="projectbuttondesc"> Lorem impsum </p>
+            </div>
+            <div class="projectbutton" onclick="viewpage('responsiveness')">
+                <h2 class="projectbuttontitle"> Responsiveness </h2>
+                <p class="projectbuttondesc"> Basic Bootstrap </p>
+            </div>
+            <div class="projectbutton" onclick="viewpage('makeupAPI')">
+                <h2 class="projectbuttontitle"> Makeup API </h2>
+                <p class="projectbuttondesc"> An experiment in dynamic elements </p>
+            </div>
+            <div class="projectbutton" onclick="viewpage('weatherAPI')">
+                <h2 class="projectbuttontitle"> Weather API </h2>
+                <p class="projectbuttondesc"> My first project with APIs. </p>
+            </div>
+        </div> -->
+        <zero-md class="tabcontent markdownpg" id="viewmarkdown"></zero-md>
+        <!-- <zero-md src="https://josephinel6.github.io/weatherAPI.md" class="tabcontent markdownpg" id="weatherAPI">
+
+
+        </zero-md> -->
+        <!-- <zero-md src="https://josephinel6.github.io/makeupAPI.md" class="tabcontent markdownpg"
+            id="makeupAPI"></zero-md>-->
+        <div class="tabcontent" id="aboutpage">
+            <zero-md src="https://josephinel6.github.io/about.md" class="markdownpg"></zero-md>
+        </div>
+        <script>
+            var night;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            window.onload = function () {
+                var night = false;
+                var night = true;
+                document.documentElement.classList.remove("light")
+                document.documentElement.classList.add("dark")
+                window.localStorage.setItem('mode', 'dark');
+                console.log("dark")
+                document.getElementById("homepage").style.display = "block";
+            }
+
+            function viewpage(pageName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById("viewmarkdown").style.display = "block";
+                document.getElementById("viewmarkdown").src = "https://josephinel6.github.io/" + pageName + ".md";
+
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+            function openpage(pageName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(pageName).style.display = "block";
+
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+            function daynight() {
+                var daynight = document.getElementById("day-night");
+                if (night == true) {
+                    daynight.classList.remove("fa-sun-o");
+                    daynight.classList.add("fa-moon-o");
+                    night = false;
+                    document.documentElement.classList.remove("dark")
+                    document.documentElement.classList.add("light")
+                    window.localStorage.setItem('mode', 'light');
+                }
+                else {
+                    daynight.classList.remove("fa-moon-o");
+                    daynight.classList.add("fa-sun-o");
+                    night = true;
+                    document.documentElement.classList.remove("light")
+                    document.documentElement.classList.add("dark")
+                    window.localStorage.setItem('mode', 'dark');
+                }
+            }
+        </script>
+
+</body>
+
+</html>

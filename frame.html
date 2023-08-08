@@ -2,7 +2,11 @@
 <html>
 
 <head>
-
+    <style>
+        /* .fa-2x {
+            height: 20px !important;
+        } */
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
@@ -18,11 +22,21 @@
 </head>
 
 <body>
-    <div id="frame-placeholder"></div>
-    <div id="window">
-        <div id="homepage" class="tabcontent">
-            <h2> Under construction </h2>
+    <div id="menu">
+        <div style="position:absolute; top: 8%; width: 100%; text-align: center;">
+
+            <p class="menutext" onclick="openpage('homepage')"> Home </p>
+            <p class="menutext" onclick="openpage('projectbuttons')"> Projects </p>
+            <p class="menutext" onclick="openpage('aboutpage')"> About </p>
+
         </div>
+
+        <div style="position:absolute; bottom:3%; width: 100%; text-align: center;">
+            <a href="https://github.com/josephinel6" class="fa fa-github fa-2x" style="text-decoration: none;"></a>
+        </div>
+    </div>
+    <div id="topbar">
+        <i onclick="daynight()" class="fa fa-sun-o fa-lg" id="day-night"></i>
     </div>
 </body>
 
