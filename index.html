@@ -3,6 +3,7 @@
 
 <head>
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
@@ -15,15 +16,207 @@
                 'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css', "custom.css"]
         }
     </script>
+    <style>
+        h1 {
+            font-family: sans-serif;
+            color: var(--color-title-text);
+        }
+
+        p {
+            color: var(--color-title-text);
+            font-family: monospace;
+            /* line-height: 1em; */
+            font-size: 1.2em;
+            margin-bottom: 0.2vh;
+            margin-top: 0;
+        }
+
+        .typewriter h1 {
+            font-family: monospace;
+            overflow: hidden;
+            border-right: .15em solid var(--color-title-text);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 1s steps(30, end),
+                blink-caret .5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 13%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--color-title-text)
+            }
+        }
+
+        #options {
+            padding-left: 2vw;
+            display: inline-block;
+        }
+
+        .intro-option:hover {
+            color: var(--color-title-hover);
+            cursor: pointer;
+        }
+
+        #intro-block-expansion {
+            display: none;
+            width: 25vw;
+            /* background-color: orang  e; */
+            height: 50vh;
+            margin-top: 4vh;
+        }
+
+        #project-preview {
+            background-color: var(--color-obj-bg);
+            height: 70vh;
+            width: 45vw;
+            display: inline-block;
+            width: 45vw;
+            right: 5vw;
+            top: 9vh;
+            /* magin-top: -15vh; */
+            position: absolute;
+        }
+
+        @media screen and (max-width: 1200px) {
+            #intro-block-expansion {
+                width: 30vw;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            #intro-block-expansion {
+                width: 40vw;
+            }
+
+            #project-preview {
+                display: block;
+                position: relative;
+                height: 50vh;
+                width: 100%;
+                margin-top: 5vh;
+                right: 0;
+                padding-top: 2%;
+            }
+
+        }
+
+        #button-one:hover {
+            background-color: var(--color-mid-obj-hover) !important;
+            cursor: pointer;
+            /* background-color: orange; */
+        }
+    </style>
 </head>
 
 <body>
     <div id="frame-placeholder"></div>
     <div id="window">
         <div id="homepage" class="tabcontent">
-            <h2> Under construction </h2>
+            <div
+                style="position: absolute;background-color: yellow; color: black; z-index: 5; margin-top: 95vh; left: -15vw; font-family: sans-serif; width: 200vw; text-align: center; vertical-align: middle; font-weight: bold; font-size: 1.5em; white-space: nowrap;  transform: rotate(30deg);">
+                UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER
+                CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER
+                CONSTRUCTION
+                UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION UNDER CONSTRUCTION </div>
+            <p style="font-size: 2em;"> Under construction </p>
+            <div id="intro-block" style="inline-block">
+                <img style="float: left; display: inline-block; height: 15vh; width: 10vw; object-fit: cover; border-radius: 2em;"
+                    src="images/profile.jpg">
+                <div class="typewriter">
+                    <h1 style="display: inline-block; margin-left: 2vw; margin-top: 0.6vh;"> Josephine
+                    </h1>
+                </div>
+                <div id="options">
+                    <p class="intro-option" onclick="showexpansion('robotics')"> robotics </p>
+                    <p class="intro-option" onclick="showexpansion('ballet')"> ballet </p>
+                    <p class="intro-option" onclick="showexpansion('academics')"> academics </p>
+                </div>
+                <div id="intro-block-expansion"></div>
+            </div>
+            <div id="project-preview">
+                <zero-md class="tabcontent markdownpg" id="viewmarkdown"
+                    src="https://josephinel6.github.io/makeupAPI.md"
+                    style="margin-left: 2.5%; width: 90%; overflow-x: hidden; height: 85%; margin-top: 2.5%;"></zero-md>
+                <CENTER>
+                    <button id="button-one"
+                        style="font-family: sans-serif; margin-top: 6vh; background-color: var(--color-mid-obj-bg); border: none; padding: 0.5em; border-radius: 0.5em; margin-left: 0.5vw; margin-right: 0.5vw;">
+                        See all projects! </button>
+                </CENTER>
+            </div>
         </div>
     </div>
+    <script>
+        let roboticsclicked = false;
+        let balletclicked = false;
+        let academicsclicked = false;
+        function showexpansion(expansionType) {
+            document.getElementById("intro-block-expansion").style.display = "block";
+            for (i = document.getElementsByClassName("intro-expansion-element").length - 1; i > -1; i--) {
+                document.getElementsByClassName("intro-expansion-element")[i].remove();
+            }
+            switch (expansionType) {
+                case "robotics":
+                    if (roboticsclicked == true) {
+                        roboticsclicked = false;
+                        document.getElementById("intro-block-expansion").style.display = "none";
+                    }
+                    else {
+                        roboticsclicked = true;
+                        var p = document.createElement("p");
+                        p.className = "intro-expansion-element";
+                        p.innerHTML = "In the 2022-23 season, I competed in VRC on team 10S with Exothermic Robotics. We recieved Judge's Award at a local competition and the Inspire Award at the Washington State Championships.";
+                        document.getElementById("intro-block-expansion").appendChild(p);
+                    }
+                    break;
+                case "ballet":
+                    if (balletclicked == true) {
+                        balletclicked = false;
+                        document.getElementById("intro-block-expansion").style.display = "none";
+                    }
+                    else {
+                        balletclicked = true;
+                        var p = document.createElement("p");
+                        p.className = "intro-expansion-element";
+                        p.innerHTML = "I study ballet at Emerald Ballet Academy and have performed with them multiple times, recently in YAGP, their production of Sleeping Beauty, and as part of a program bringing ballet to elementary schools in the area.";
+                        document.getElementById("intro-block-expansion").appendChild(p);
+                        // var img = document.createElement("img");
+                        // document.getElementById("intro-block-expansion").appendChild(img);
+                    }
+                    break;
+                case "academics":
+                    if (academicsclicked == true) {
+                        academicsclicked = false;
+                        document.getElementById("intro-block-expansion").style.display = "none";
+                    }
+                    else {
+                        academicsclicked = true;
+                        var p = document.createElement("p");
+                        p.className = "intro-expansion-element";
+                        p.innerHTML = "In the 2022-23 academic year, I recieved As in both semesters of school. Additionally, I self-studied AP Calculus AB and AP Computer Science Principles, recieving 5s on both tests taken through my public school.";
+                        document.getElementById("intro-block-expansion").appendChild(p);
+                    }
+                    break;
+            }
+        }
+    </script>
 </body>
 
 </html>
