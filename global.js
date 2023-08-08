@@ -1,12 +1,12 @@
 var night;
 
-tabcontent = document.getElementsByClassName("tabcontent");
+var tabcontent = document.getElementsByClassName("tabcontent");
 for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
 }
 
 $(function () {
-    $("#frame-placeholder").load("https://www.github.com/josephinel6/josephinel6.github.io/frame.html");
+    $("#frame-placeholder").load("https://josephinel6.github.io/frame.html");
 });
 
 
