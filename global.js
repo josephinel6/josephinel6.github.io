@@ -6,7 +6,7 @@ for (i = 0; i < tabcontent.length; i++) {
 }
 
 $(function () {
-    $("#frame-placeholder").load("https://josephinel6.github.io/frame.html");
+    $("#frame-placeholder").load("https://josephinel6.github.io/old-portfolio/frame.html");
 });
 
 
