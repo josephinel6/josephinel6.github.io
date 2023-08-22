@@ -6,7 +6,7 @@ for (i = 0; i < tabcontent.length; i++) {
 }
 
 $(function () {
-    $("#frame-placeholder").load("https://josephinel6.github.io/old-portfolio/frame.html");
+    $("#frame-placeholder").load("https://josephinel6.github.io/frame.html");
 });
 
 
@@ -31,7 +31,7 @@ function viewpage(pageName) {
         tablinks[i].style.backgroundColor = "";
     }
     document.getElementById("viewmarkdown").style.display = "block";
-    document.getElementById("viewmarkdown").src = "https://josephinel6.github.io/old-portfolio/" + pageName + ".md";
+    document.getElementById("viewmarkdown").src = "https://josephinel6.github.io/" + pageName + ".md";
 
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
