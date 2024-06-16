@@ -1,8 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import Frame from './components/Frame.vue'
 </script>
+
+<script></script>
 
 <template>
   <header>
@@ -10,7 +12,7 @@ import Frame from './components/Frame.vue'
 
     <div class="wrapper">
       <!-- <HelloWorld msg="You did it!" /> -->
-      <Frame/>
+      <Frame />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
