@@ -1,11 +1,11 @@
 ---
+layout: "../../layouts/Project.astro"
 title: "Makeup API"
-tags: ["astro", "blogging", "learning in public"]
+description: "Simple makeup API"
+thumbnail: "../../public/project-images/makeupAPI_7.png"
+tools: ["javascript"]
+tags: ["class assignment"]
 ---
-
-# Makeup API
-
-Published on: 2022-07-01
 
 **Purpose:** Class assignment  
 **Link:** https://makeupapi.josephinemouse.repl.co/
@@ -27,6 +27,8 @@ Some other cool features of the site include product displays listing prices and
 ![](images/makeupAPI_8.PNG)
 \
 \ -->
+
+![](../../../public/project-images/makeupAPI_7.PNG)
 
 **Reflection:** I don't think I will, but if I were to go back and add to this site, I would add a proper home page, of course, as well as filters for each page (price, style, etc., so you can have _multiple_ filters for products) and an option to choose how many products you want to load per page. This would likely come with a page selector, but I could also just add a "load more" at the bottom of each page. At the start of the project, I did have a home page, but it just loaded _all_ the products in the database, no "load more" or anything, which naturally failed pretty quickly. If I were to go back and add more, I think I would randomly select a category or filter and show all products from those on the page, changing the category/filter on each reload.
 

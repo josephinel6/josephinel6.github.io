@@ -1,25 +1,37 @@
-.dark {
-  --color-bg: #212121;
-  --color-menu-text: #d3d3d3;
-  --color-page-bg: #333333;
+:root.dark {
+  --color-bg: #121212;
+  --color-obj-bg: #2b2b2b;
+  /* --color-obj-hover: #e8c9b6; */
+  --color-text: #e1e1e1;
+
+  /* --color-bg: #212121; */
+  --color-menu-text: #e1e1e1;
+  --color-menu-hover: #767676;
+  /* --color-page-bg: #333333;
   --color-obj-bg: #403f3f;
   --color-mid-obj-bg: #535252;
   --color-mid-obj-hover: rgb(58, 58, 58);
   --color-title-text: #d3d3d3;
   --color-gen-text: white;
   --color-menu-hover: grey;
-  --color-title-hover: grey;
+  --color-title-hover: grey; */
 }
 
-.light {
-  --color-bg: #eeeff6;
-  --color-menu-text: #4d4d4d;
-  --color-page-bg: white;
-  --color-obj-bg: #f1f2f3;
-  --color-mid-obj-bg: #b0b0b0;
-  --color-mid-obj-hover: #8e8e8e;
-  --color-title-text: #4d4d4d;
+:root {
+  --color-bg: #fffdfc;
+  --color-obj-bg: #efdfe0;
+  --color-obj-hover: #e8c9b6;
+  --color-text: #313131;
+  --color-menu-text: #2c2c2c;
+  --color-menu-hover: darkgrey;
+  /* --color-title-text: #4d4d4d;
   --color-gen-text: #4d4d4d;
   --color-menu-hover: darkgrey;
-  --color-title-hover: darkgrey;
+  --color-title-hover: darkgrey; */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }

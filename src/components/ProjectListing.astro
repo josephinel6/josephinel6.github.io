@@ -1,0 +1,77 @@
+---
+const { title, desc, img, tools, url } = Astro.props;
+console.log("Test");
+console.log(tools);
+---
+
+<html>
+  <head>
+    <style>
+      .project-listing {
+        /* height: 80vh;
+        overflow-y: hidden; */
+        color: var(--color-text);
+      }
+
+      /* .nested:hover {
+        cursor: pointer;
+        background-color: var(--color-obj-hover);
+      } */
+
+      .nested:hover {
+        cursor: pointer;
+      }
+
+      img {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .nested {
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 0.5em;
+        /* height: 100%; */
+        background-color: var(--color-obj-bg);
+      }
+
+      .project-listing-title {
+        font-size: 2em;
+      }
+
+      .project-listing-desc {
+        font-size: 1em;
+        margin-bottom: 0;
+        height: 35vh;
+        overflow-y: hidden;
+      }
+
+      .tool-logo {
+        height: 4.5vh;
+        width: 4.5vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project-listing">
+      <div class="nested" onclick={"location.href='" + url + "'"}>
+        <img src={img} />
+        <h3 class="project-listing-title">{title}</h3>
+        <p class="project-listing-desc">{desc}</p>
+        {
+          tools.map((tool) => (
+            <img
+              class="tool-logo"
+              src={"../../public/logos/" + tool + ".png"}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </body>
+</html>
