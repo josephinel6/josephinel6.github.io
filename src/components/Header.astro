@@ -19,7 +19,7 @@ import "../styles/global.css";
         left: 0;
         display: flex;
         vertical-align: middle;
-        justify-content: right;
+        /* justify-content: right; */
         align-items: center;
         color: var(--color-icons);
       }
@@ -27,10 +27,17 @@ import "../styles/global.css";
       #day-night {
         color: var(--color-menu-text);
         z-index: 2;
+        position: absolute;
+        right: 0;
         margin-right: 1vw;
       }
 
-      #day-night:hover {
+      #home {
+        position: absolute;
+        left: 1vw;
+      }
+
+      .fa:hover {
         cursor: pointer;
         color: var(--color-menu-hover);
       }
@@ -38,6 +45,7 @@ import "../styles/global.css";
   </head>
   <body>
     <div id="topbar">
+      <i class="fa fa-home fa-lg" id="home" onclick="location.href='/'"></i>
       <i class="fa fa-sun fa-lg" id="day-night"></i>
     </div>
 

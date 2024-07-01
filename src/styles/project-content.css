@@ -1,3 +1,5 @@
-.slot > img {
-  height: 20vh;
+#content > * img {
+  width: 50vw;
+  object-fit: cover;
+  height: auto;
 }
