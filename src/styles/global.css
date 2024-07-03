@@ -23,3 +23,8 @@ body {
   overflow-x: hidden;
   background-color: var(--color-bg);
 }
+
+#main-content {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}

@@ -31,10 +31,10 @@ console.log(tools);
       }
 
       .nested {
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
         border-radius: 0.5em;
         /* height: 100%; */
         background-color: var(--color-obj-bg);
@@ -52,8 +52,9 @@ console.log(tools);
       }
 
       .tool-logo {
-        height: 4.5vh;
-        width: 4.5vh;
+        height: 4vh;
+        width: fit-content;
+        margin-right: 0.3em;
       }
     </style>
   </head>
@@ -67,7 +68,7 @@ console.log(tools);
           tools.map((tool) => (
             <img
               class="tool-logo"
-              src={"../../public/logos/" + tool + ".png"}
+              src={"../../public/logos/" + tool + ".svg "}
             />
           ))
         }

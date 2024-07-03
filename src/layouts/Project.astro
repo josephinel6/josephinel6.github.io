@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 
 import "../styles/global.css";
 import "../styles/project-content.css";
+import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -15,10 +16,10 @@ const { frontmatter } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/public/logo.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
+    <title>{frontmatter.title} | Josephine's Portfolio</title>
     <style>
       #project {
         margin-top: 5%;
@@ -48,6 +49,10 @@ const { frontmatter } = Astro.props;
         margin-bottom: 0.7vh;
       }
 
+      #project-try-it:hover {
+        cursor: pointer;
+      }
+
       #title {
         margin-top: 3vh;
         margin-bottom: 0.1em;
@@ -58,6 +63,11 @@ const { frontmatter } = Astro.props;
           width: 90vw;
           margin-left: 5vw;
         }
+
+        /* #project-try-it {
+          padding: 0.5em;
+          margin-bottom: ;
+        } */
       }
 
       .tag {
@@ -84,6 +94,10 @@ const { frontmatter } = Astro.props;
         margin-right: 0.25em;
       }
 
+      .tool-tag:hover {
+        cursor: pointer;
+      }
+
       #made-with {
         font-size: 0.8em;
         margin-top: 0;
@@ -92,34 +106,49 @@ const { frontmatter } = Astro.props;
     </style>
   </head>
   <body>
-    <Header />
-    <div id="project">
-      <div id="tags">
-        {frontmatter.tags.map((tag) => <div class="tag"> {tag} </div>)}
-      </div>
-      <div style="text-align:center">
-        <img id="thumbnail" src={frontmatter.thumbnail} />
-      </div>
-      <h1 id="title">{frontmatter.title}</h1>
+    <BaseLayout>
+      <div id="project">
+        <div id="tags">
+          {
+            frontmatter.tags.map((tag) => (
+              <div class="tag" onclick={"location.href='/tags/" + tag + "'"}>
+                {" "}
+                {tag}{" "}
+              </div>
+            ))
+          }
+        </div>
+        <div style="text-align:center">
+          <img id="thumbnail" src={frontmatter.thumbnail} />
+        </div>
+        <h1 id="title">{frontmatter.title}</h1>
 
-      <p id="made-with">
-        Made with {
-          frontmatter.tools.map((tool) => <u class="tool-tag"> {tool}</u>)
-        }
-      </p>
+        <p id="made-with">
+          Made with {
+            frontmatter.tools.map((tool) => (
+              <u
+                class="tool-tag"
+                onclick={"location.href='/tools/" + tool + "'"}
+              >
+                {" "}
+                {tool}
+              </u>
+            ))
+          }
+        </p>
 
-      <button
-        id="project-try-it"
-        onclick={"location.href'" + frontmatter.link + "'"}
-      >
-        Try It ↗</button
-      >
+        <button
+          id="project-try-it"
+          onclick={"location.href'" + frontmatter.link + "'"}
+        >
+          Try It ↗</button
+        >
 
-      <div id="content">
-        <slot class="slot" />
-      </div>
-    </div>
-    <Footer />
+        <div id="content">
+          <slot class="slot" />
+        </div>
+      </div></BaseLayout
+    >
     <script>
       import "../scripts/global.js";
     </script>
