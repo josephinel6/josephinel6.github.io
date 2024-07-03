@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProjectListing from "../components/ProjectListing.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const allPosts = await Astro.glob("./projects/*.md");
 ---
@@ -25,10 +26,6 @@ const allPosts = await Astro.glob("./projects/*.md");
       crossorigin="anonymous"></script>
     <script is:inline src="/src/scripts/global.js"></script>
     <style>
-      body {
-        background-color: var(--color-bg);
-      }
-
       h1 {
         font-family: sans-serif;
         color: var(--color-title-text);
@@ -136,46 +133,45 @@ const allPosts = await Astro.glob("./projects/*.md");
     </style>
   </head>
   <body>
-    <!-- <Navigation/> -->
-    <Header />
-    <div id="main-content">
-      <div class="typewriter" id="typewriter">
-        <h1>My work:</h1>
-      </div>
-      <div id="projects">
-        <div class="row row-cols-3 gx-3 gy-3">
-          {
-            allPosts.map((post) => (
-              <ProjectListing
-                title={post.frontmatter.title}
-                desc={post.frontmatter.description}
-                img={post.frontmatter.thumbnail}
-                tools={post.frontmatter.tools}
-                url={post.url}
-              />
-            ))
-          }
-          <ProjectListing
-            title="test"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis."
-            img="../../public/project-images/makeupAPI_7.png"
-            tools={["javascript"]}
-          />
-          <ProjectListing
-            title="test"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis. Integer suscipit, lorem ut vestibulum ultricies, neque purus tristique nisl, vitae molestie neque tortor non magna."
-            img="../../public/project-images/makeupAPI_7.png"
-            tools={["javascript"]}
-          />
-          <ProjectListing
-            title="test"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis."
-            img="../../public/project-images/makeupAPI_7.png"
-            tools={["javascript"]}
-          />
+    <BaseLayout>
+      <div id="main-content">
+        <div class="typewriter" id="typewriter">
+          <h1>My work:</h1>
+        </div>
+        <div id="projects">
+          <div class="row row-cols-3 gx-3 gy-3">
+            {
+              allPosts.map((post) => (
+                <ProjectListing
+                  title={post.frontmatter.title}
+                  desc={post.frontmatter.description}
+                  img={post.frontmatter.thumbnail}
+                  tools={post.frontmatter.tools}
+                  url={post.url}
+                />
+              ))
+            }
+            <ProjectListing
+              title="test"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis."
+              img="../../public/project-images/makeupAPI_7.png"
+              tools={["javascript"]}
+            />
+            <ProjectListing
+              title="test"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis. Integer suscipit, lorem ut vestibulum ultricies, neque purus tristique nisl, vitae molestie neque tortor non magna."
+              img="../../public/project-images/makeupAPI_7.png"
+              tools={["javascript"]}
+            />
+            <ProjectListing
+              title="test"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis."
+              img="../../public/project-images/makeupAPI_7.png"
+              tools={["javascript"]}
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <Footer />
+    </BaseLayout>
   </body>
 </html>
