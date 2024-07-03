@@ -3,7 +3,7 @@ title: "Makeup API"
 description: "Simple makeup API"
 thumbnail: "./images/makeupAPI_7.PNG"
 tools: ["JavaScript", "HTML"]
-tags: ["class-assignment"]
+tags: ["class-assignment", "archive"]
 link: "https://makeupapi.josephinemouse.repl.co/"
 slug: "makeup-api"
 ---

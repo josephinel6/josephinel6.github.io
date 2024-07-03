@@ -16,13 +16,20 @@ import "../styles/global.css";
     <style>
       body {
         margin-top: 9vh;
+        min-height: 100%;
+      }
+
+      #content {
+        min-height: 80.5vh;
       }
     </style>
   </head>
   <body>
     <!-- <Navigation/> -->
     <Header />
-    <slot />
+    <div id="content">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

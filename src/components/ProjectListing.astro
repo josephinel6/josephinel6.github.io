@@ -17,6 +17,7 @@ console.log(tools);
         /* height: 80vh;
         overflow-y: hidden; */
         color: var(--color-text);
+        max-height: 80vh;
       }
 
       /* .nested:hover {
@@ -53,7 +54,6 @@ console.log(tools);
       .project-listing-desc {
         font-size: 1em;
         margin-bottom: 0;
-        height: 35vh;
         overflow-y: hidden;
       }
 
@@ -73,7 +73,11 @@ console.log(tools);
         <p class="project-listing-desc">{desc}</p>
         {
           tools.map((tool) => (
-            <img class="tool-logo" src={"/logos/" + tool + ".svg "} />
+            <img
+              class="tool-logo"
+              onclick={"location.href='/tools/" + tool + "'"}
+              src={"/public/logos/" + tool + ".svg "}
+            />
           ))
         }
       </div>
