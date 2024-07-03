@@ -62,11 +62,11 @@ const { projects } = Astro.props;
             {
               projects.map((project) => (
                 <ProjectListing
-                  title={project.frontmatter.title}
-                  desc={project.frontmatter.description}
-                  img={project.frontmatter.thumbnail}
-                  tools={project.frontmatter.tools}
-                  url={project.url}
+                  title={project.data.title}
+                  desc={project.data.description}
+                  img={project.data.thumbnail}
+                  tools={project.data.tools}
+                  url={`/project/${project.slug}/`}
                 />
               ))
             }

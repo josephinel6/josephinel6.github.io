@@ -1,7 +1,13 @@
 ---
+import { ImageMetadata } from "astro";
+import Image from "astro/components/Image.astro";
 const { title, desc, img, tools, url } = Astro.props;
 console.log("Test");
 console.log(tools);
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/content/images/*.{jpeg,jpg,png,gif}",
+);
 ---
 
 <html>
@@ -61,7 +67,7 @@ console.log(tools);
   <body>
     <div class="project-listing">
       <div class="nested" onclick={"location.href='" + url + "'"}>
-        <img src={img} />
+        <Image src={images[img]()} alt="Thumbnail" />
         <h3 class="project-listing-title">{title}</h3>
         <p class="project-listing-desc">{desc}</p>
         {
