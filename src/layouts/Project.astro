@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Image from "astro/components/Image.astro";
 
 import "../styles/global.css";
 import "../styles/project-content.css";
@@ -33,7 +34,8 @@ const { frontmatter } = Astro.props;
 
       #thumbnail {
         width: 100%;
-        object-fit: cover;
+        height: min-content;
+        object-fit: contain;
       }
 
       #content {
@@ -72,7 +74,7 @@ const { frontmatter } = Astro.props;
 
       .tag {
         border-radius: 0.8em;
-        border: 1px black solid;
+        border: 1px var(--color-outline) solid;
         /* background-color: white; */
         padding: 0.25em;
         padding-left: 0.4em;
@@ -84,6 +86,7 @@ const { frontmatter } = Astro.props;
       .tag:hover {
         cursor: pointer;
         background-color: wheat;
+        background-color: var(--color-obj-hover);
       }
 
       #tags {
@@ -119,7 +122,12 @@ const { frontmatter } = Astro.props;
           }
         </div>
         <div style="text-align:center">
-          <img id="thumbnail" src={frontmatter.thumbnail} />
+          <!-- <img id="thumbnail" src={frontmatter.thumbnail} /> -->
+          <Image
+            id="thumbnail"
+            src={import("/src/content/projects/" + frontmatter.thumbnail)}
+            alt="Thumbnail"
+          />
         </div>
         <h1 id="title">{frontmatter.title}</h1>
 

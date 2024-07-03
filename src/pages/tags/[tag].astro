@@ -7,12 +7,12 @@ export async function getStaticPaths() {
   const allProjects = await getCollection("projects");
 
   const uniqueTags = [
-    ...new Set(allProjects.map((project) => project.frontmatter.tags).flat()),
+    ...new Set(allProjects.map((project) => project.data.tags).flat()),
   ];
 
   return uniqueTags.map((tag) => {
     const filteredProjects = allProjects.filter((project) =>
-      project.frontmatter.tags.includes(tag),
+      project.data.tags.includes(tag),
     );
     return {
       params: { tag },

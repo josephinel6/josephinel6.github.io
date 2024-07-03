@@ -1,6 +1,8 @@
 :root.dark {
   --color-bg: #121212;
   --color-obj-bg: #51516b;
+  --color-obj-hover: darkgrey;
+  --color-outline: white;
   --color-darker-obj-bg: #7b7bbd;
   --color-text: #e1e1e1;
   --color-menu-text: #908fbe;
@@ -10,7 +12,8 @@
 :root {
   --color-bg: #fffdfc;
   --color-obj-bg: #efdfe0;
-  --color-obj-hover: #e8c9b6;
+  --color-obj-hover: wheat;
+  --color-outline: black;
   --color-darker-obj-bg: #ad8486;
   --color-text: #313131;
   --color-menu-text: #2c2c2c;

@@ -1,13 +1,13 @@
 ---
-import { ImageMetadata } from "astro";
+// import { ImageMetadata } from "astro";
 import Image from "astro/components/Image.astro";
 const { title, desc, img, tools, url } = Astro.props;
 console.log("Test");
 console.log(tools);
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/content/images/*.{jpeg,jpg,png,gif}",
-);
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+//   "/src/content/images/*.{jpeg,jpg,png,gif}",
+// );
 ---
 
 <html>
@@ -67,15 +67,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   <body>
     <div class="project-listing">
       <div class="nested" onclick={"location.href='" + url + "'"}>
-        <Image src={images[img]()} alt="Thumbnail" />
-        <h3 class="project-listing-title">{title}</h3>
+        <!-- <Image src={images[img]()} alt="Thumbnail" /> -->
+        <Image src={import("/src/content/projects/" + img)} alt="Thumbnail" />
+        <h3 class="project-listing-tit le">{title}</h3>
         <p class="project-listing-desc">{desc}</p>
         {
           tools.map((tool) => (
-            <img
-              class="tool-logo"
-              src={"../../public/logos/" + tool + ".svg "}
-            />
+            <img class="tool-logo" src={"/logos/" + tool + ".svg "} />
           ))
         }
       </div>

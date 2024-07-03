@@ -7,13 +7,13 @@ export async function getStaticPaths() {
   const allProjects = await getCollection("projects");
 
   const uniqueTools = [
-    ...new Set(allProjects.map((project) => project.frontmatter.tools).flat()),
+    ...new Set(allProjects.map((project) => project.data.tools).flat()),
   ];
 
   return uniqueTools.map((tool) => {
     // const lowerCase = tool.toLowerCase();
     const filteredProjects = allProjects.filter((project) =>
-      project.frontmatter.tools.includes(tool),
+      project.data.tools.includes(tool),
     );
     return {
       params: { tool },
