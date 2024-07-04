@@ -18,6 +18,7 @@ console.log(tools);
         overflow-y: hidden; */
         color: var(--color-text);
         max-height: 80vh;
+        height: 100%;
       }
 
       /* .nested:hover {
@@ -61,6 +62,12 @@ console.log(tools);
         height: 4vh;
         width: fit-content;
         margin-right: 0.3em;
+      }
+
+      @media screen and (max-width: 800px) {
+        .tool-logo {
+          height: 2vh;
+        }
       }
     </style>
   </head>

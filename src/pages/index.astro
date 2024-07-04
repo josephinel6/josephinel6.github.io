@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProjectListing from "../components/ProjectListing.astro";
+import ProjectListings from "../components/ProjectListings.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -132,7 +133,8 @@ const allProjects = await getCollection("projects");
         <div class="typewriter" id="typewriter">
           <h1>My work:</h1>
         </div>
-        <div id="projects">
+        <ProjectListings projects={allProjects} />
+        <!-- <div id="projects">
           <div class="row row-cols-3 gx-3 gy-3">
             {
               allProjects.map((project) => (
@@ -144,8 +146,21 @@ const allProjects = await getCollection("projects");
                   url={`/project/${project.slug}/`}
                 />
               ))
-            }
-            <!-- <ProjectListing
+            }</div></div>
+               <div id="projects">
+                <div class="row row-cols-3 gx-3 gy-3">
+                  {
+                    allProjects.map((project) => (
+                      <ProjectListing
+                        title={project.data.title}
+                        desc={project.data.description}
+                        img={project.data.thumbnail}
+                        tools={project.data.tools}
+                        url={`/project/${project.slug}/`}
+                      />
+                    ))
+                  } -->
+        <!-- <ProjectListing
               title="test"
               desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis."
               img="../../public/project-images/makeupAPI_7.png"
@@ -163,8 +178,8 @@ const allProjects = await getCollection("projects");
               img="../../public/project-images/makeupAPI_7.png"
               tools={["javascript"]}
             /> -->
-          </div>
-        </div>
+        <!-- </div> -->
+        <!-- </div> -->
       </div>
     </BaseLayout>
   </body>

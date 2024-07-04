@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectListing from "../../components/ProjectListing.astro";
 import { getCollection } from "astro:content";
+import ProjectListings from "../../components/ProjectListings.astro";
 
 export async function getStaticPaths() {
   const allProjects = await getCollection("projects");
@@ -52,21 +53,8 @@ const { projects } = Astro.props;
     <BaseLayout>
       <div id="main-content">
         <p id="tool">Projects made with <u> {tool}</u>:</p>
-        <div id="projects">
-          <div class="row row-cols-3 gx-3 gy-3">
-            {
-              projects.map((project) => (
-                <ProjectListing
-                  title={project.data.title}
-                  desc={project.data.description}
-                  img={project.data.thumbnail}
-                  tools={project.data.tools}
-                  url={`/project/${project.slug}/`}
-                />
-              ))
-            }
-          </div>
-        </div>
+
+        <ProjectListings projects={projects} />
       </div>
     </BaseLayout>
   </body>

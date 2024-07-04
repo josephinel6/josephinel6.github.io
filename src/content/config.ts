@@ -11,7 +11,20 @@ const projectsCollection = defineCollection({
     tools: z.array(z.string()),
   }),
 });
+
+const unlistedCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    thumbnail: z.string(),
+    tags: z.array(z.string()),
+    tools: z.array(z.string()),
+  }),
+});
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   projects: projectsCollection,
+  unlistedProjects: unlistedCollection,
 };

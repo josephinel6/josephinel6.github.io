@@ -1,6 +1,7 @@
 ---
 title: "Responsiveness Test w/ Bootstrap"
 thumbnail: "images/bootstrap_1.PNG"
+description: "Experimentation with responsiveness and bootstrap"
 tools: ["JavaScript", "HTML", "CSS", "Bootstrap"]
 tags: ["class-assignment", "archive"]
 link: "https://responsivenessupload.josephinemouse.repl.co/"
