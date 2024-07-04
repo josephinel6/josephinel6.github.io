@@ -27,25 +27,28 @@ const { projects } = Astro.props;
         padding: 0;
       }
 
-      .container {
-        padding: 0 !important;
+      .row {
+        display: flex;
+        flex-wrap: wrap;
       }
     </style>
   </head>
   <body>
-    <div id="projects">
-      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gx-3 gy-3">
-        {
-          projects.map((project) => (
-            <ProjectListing
-              title={project.data.title}
-              desc={project.data.description}
-              img={project.data.thumbnail}
-              tools={project.data.tools}
-              url={`/project/${project.slug}/`}
-            />
-          ))
-        }
+    <div id="main-content">
+      <div id="projects">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gx-3 gy-3">
+          {
+            projects.map((project) => (
+              <ProjectListing
+                title={project.data.title}
+                desc={project.data.description}
+                img={project.data.thumbnail}
+                tools={project.data.tools}
+                url={`/project/${project.slug}/`}
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   </body>

@@ -56,11 +56,9 @@ const { projects } = Astro.props;
   </head>
   <body>
     <BaseLayout>
-      <div id="main-content">
-        <p id="tag">{tag}</p>
+      <p id="tag" class="title">{tag}</p>
 
-        <ProjectListings projects={projects} />
-      </div>
+      <ProjectListings projects={projects} />
     </BaseLayout>
   </body>
 </html>

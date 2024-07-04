@@ -26,10 +26,13 @@ const { frontmatter } = Astro.props;
         margin-top: 5%;
         font-family: sans-serif;
         width: 50vw;
-        margin-left: 25vw;
+        /* margin-left: 21vw; */
         background-color: var(--color-obj-bg);
         padding: 1.5em;
         color: var(--color-text);
+        margin-left: 25vw;
+        /* left: 25vw; */
+        /* position: absolute; */
       }
 
       #thumbnail {
@@ -108,54 +111,63 @@ const { frontmatter } = Astro.props;
         margin-top: 0;
         margin-bottom: 2.5vh;
       }
+
+      /* #wrapper {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } */
     </style>
   </head>
   <body>
     <BaseLayout>
-      <div id="project">
-        <div id="tags">
-          {
-            frontmatter.tags.map((tag) => (
-              <div class="tag" onclick={"location.href='/tags/" + tag + "'"}>
-                {" "}
-                {tag}{" "}
-              </div>
-            ))
-          }
-        </div>
-        <div style="text-align:center">
-          <!-- <img id="thumbnail" src={frontmatter.thumbnail} /> -->
-          <Image
-            id="thumbnail"
-            src={import("/src/content/projects/" + frontmatter.thumbnail)}
-            alt="Thumbnail"
-          />
-        </div>
-        <h1 id="title">{frontmatter.title}</h1>
+      <div id="wrapper">
+        <div id="project">
+          <div id="tags">
+            {
+              frontmatter.tags.map((tag) => (
+                <div class="tag" onclick={"location.href='/tags/" + tag + "'"}>
+                  {" "}
+                  {tag}{" "}
+                </div>
+              ))
+            }
+          </div>
+          <div style="text-align:center">
+            <!-- <img id="thumbnail" src={frontmatter.thumbnail} /> -->
+            <Image
+              id="thumbnail"
+              src={import("/src/content/projects/" + frontmatter.thumbnail)}
+              alt="Thumbnail"
+            />
+          </div>
+          <h1 id="title">{frontmatter.title}</h1>
 
-        <p id="made-with">
-          Made with {
-            frontmatter.tools.map((tool) => (
-              <u
-                class="tool-tag"
-                onclick={"location.href='/tools/" + tool + "'"}
-              >
-                {" "}
-                {tool}
-              </u>
-            ))
-          }
-        </p>
+          <p id="made-with">
+            Made with {
+              frontmatter.tools.map((tool) => (
+                <u
+                  class="tool-tag"
+                  onclick={"location.href='/tools/" + tool + "'"}
+                >
+                  {" "}
+                  {tool}
+                </u>
+              ))
+            }
+          </p>
 
-        <button
-          id="project-try-it"
-          onclick={"location.href'" + frontmatter.link + "'"}
-        >
-          Try It ↗</button
-        >
+          <button
+            id="project-try-it"
+            onclick={"location.href'" + frontmatter.link + "'"}
+          >
+            Try It ↗</button
+          >
 
-        <div id="content">
-          <slot class="slot" />
+          <div id="content">
+            <slot class="slot" />
+          </div>
         </div>
       </div></BaseLayout
     >

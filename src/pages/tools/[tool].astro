@@ -51,11 +51,9 @@ const { projects } = Astro.props;
   </head>
   <body>
     <BaseLayout>
-      <div id="main-content">
-        <p id="tool">Projects made with <u> {tool}</u>:</p>
+      <p id="tool" class="title">Projects made with <u> {tool}</u>:</p>
 
-        <ProjectListings projects={projects} />
-      </div>
+      <ProjectListings projects={projects} />
     </BaseLayout>
   </body>
 </html>

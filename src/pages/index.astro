@@ -129,12 +129,12 @@ const allProjects = await getCollection("projects");
   </head>
   <body>
     <BaseLayout>
-      <div id="main-content">
-        <div class="typewriter" id="typewriter">
-          <h1>My work:</h1>
-        </div>
-        <ProjectListings projects={allProjects} />
-        <!-- <div id="projects">
+      <!-- <div id="main-content"> -->
+      <div class="typewriter title" id="typewriter">
+        <h1>My work:</h1>
+      </div>
+      <ProjectListings projects={allProjects} />
+      <!-- <div id="projects">
           <div class="row row-cols-3 gx-3 gy-3">
             {
               allProjects.map((project) => (
@@ -160,7 +160,7 @@ const allProjects = await getCollection("projects");
                       />
                     ))
                   } -->
-        <!-- <ProjectListing
+      <!-- <ProjectListing
               title="test"
               desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat magna nulla, eu auctor elit porta id. Morbi tortor est, fringilla at odio eu, malesuada molestie nulla. Nullam nec ligula sagittis, lobortis leo sed, luctus nisl. Morbi laoreet lacinia leo sit amet tempor. Nam pharetra, ipsum non porta elementum, neque est finibus arcu, nec rutrum nunc erat hendrerit felis."
               img="../../public/project-images/makeupAPI_7.png"
@@ -178,9 +178,9 @@ const allProjects = await getCollection("projects");
               img="../../public/project-images/makeupAPI_7.png"
               tools={["javascript"]}
             /> -->
-        <!-- </div> -->
-        <!-- </div> -->
-      </div>
+      <!-- </div> -->
+      <!-- </div> -->
+      <!-- </div> -->
     </BaseLayout>
   </body>
 </html>

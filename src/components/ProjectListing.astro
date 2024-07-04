@@ -18,7 +18,7 @@ console.log(tools);
         overflow-y: hidden; */
         color: var(--color-text);
         max-height: 80vh;
-        height: 100%;
+        /* height: 100%; */
       }
 
       /* .nested:hover {
@@ -33,8 +33,8 @@ console.log(tools);
       img {
         margin-top: 2vh;
         margin-bottom: 2vh;
-        height: 100%;
         width: 100%;
+        height: auto;
         object-fit: cover;
       }
 
@@ -46,6 +46,7 @@ console.log(tools);
         border-radius: 0.5em;
         /* height: 100%; */
         background-color: var(--color-obj-bg);
+        height: 100%;
       }
 
       .project-listing-title {
@@ -69,10 +70,15 @@ console.log(tools);
           height: 2vh;
         }
       }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+      }
     </style>
   </head>
   <body>
-    <div class="project-listing">
+    <div class="project-listing col">
       <div class="nested" onclick={"location.href='" + url + "'"}>
         <!-- <Image src={images[img]()} alt="Thumbnail" /> -->
         <Image src={import("/src/content/projects/" + img)} alt="Thumbnail" />
