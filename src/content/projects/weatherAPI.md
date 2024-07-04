@@ -16,7 +16,7 @@ It would make more sense for the user to input a location and go through a geoco
 \
 !["homepage"](/project-images/weatherAPI_1.png)  
   
-The image above shows the homepage of the program. As you can see, there is a space for the user to input latitude and longitude. There is also an image background and a paintbrush icon in the bottom right corner that allows the user to change the background to another random image. This is done with the [Lorem Ipsum API](https://picsum.photos/), which allows you to put in parameters and returns a random image that fits the given height, width, etc. This API is used every time the page is loaded, as well as whenever the user clicks the paintbrush, allowing a random background to be displayed every time the site is accessed. The function for this is pretty simple:
+The image above shows the homepage of the program. As you can see, there is a space for the user to input latitude and longitude. There is also an image background and a paintbrush icon in the bottom right corner that allows the user to change the background to another random image. This is done with the [Lorem Ipsum API](https://picsum.photos/), which allows you to put in parameters and returns a random image that fits the given height, width, etc. This API is used every time the page is loaded, as well as whenever the user clicks the paintbrush, allowing a random background to be displayed every time the site is accessed:
   
 ```js
 function changebg() {
@@ -29,7 +29,6 @@ The following shows the weather actually being returned:
 \
 ![New Orleans Weather](/project-images/weatherAPI_2.png)  
 \
-As you can see, I opted for a pretty simple layout here, with just the weather in the center, a background, and a button to go back to the home screen (the x in the top left corner). Most of the code is as you'd expect:  
 
 ```js
 function getweather() {
@@ -45,6 +44,6 @@ function getweather() {
 }
 ```  
 \
-There's more to the function, of course, but this is all that I think really needs to be seen. You might notice that this page also has a background--the majority of the getweather() function is dedicated to setting the background. I probably could've used an API for this, at the very least, but I choose to save, upload, and retrieve all of the photos manually instead. Looking back, this was not the best use of my time, but I think I'll save that knowledge for future projects.  
-\
-**Reflection:** I'm overall pretty happy with this project. Besides a few blurry backgrounds, the whole thing looks pretty clean and it does what I created it to do. It was a great way for me to learn how to use fetch APIs and it's been a good reference for future projects I've done using APIs. Despite having to simplify the idea due to CORS errors and the hour it took me to add all the weather backgrounds, I'd say it was a good start and an overall success for my original goal of learning to use APIs with JS.
+There's more to the function, of course, but this is the most critical part.
+
+ You might notice that this page also has a background--the majority of the getweather() function is dedicated to setting the background. I should have used an API for this; instead, I added each photo myself.

@@ -17,7 +17,7 @@ const { frontmatter } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/public/logo.png" />
+    <link rel="shortcut icon" href="/public/logo.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.title} | Josephine's Portfolio</title>
@@ -125,12 +125,13 @@ const { frontmatter } = Astro.props;
       <div id="project">
         <div id="tags">
           {
-            frontmatter.tags.map((tag) => (
-              <div class="tag" onclick={"location.href='/tags/" + tag + "'"}>
-                {" "}
-                {tag}{" "}
-              </div>
-            ))
+            frontmatter.tags &&
+              frontmatter.tags.map((tag) => (
+                <div class="tag" onclick={"location.href='/tags/" + tag + "'"}>
+                  {" "}
+                  {tag}{" "}
+                </div>
+              ))
           }
         </div>
         <div style="text-align:center">
@@ -150,15 +151,16 @@ const { frontmatter } = Astro.props;
 
         <p id="made-with">
           Made with {
-            frontmatter.tools.map((tool) => (
-              <u
-                class="tool-tag"
-                onclick={"location.href='/tools/" + tool + "'"}
-              >
-                {" "}
-                {tool}
-              </u>
-            ))
+            frontmatter.tools &&
+              frontmatter.tools.map((tool) => (
+                <u
+                  class="tool-tag"
+                  onclick={"location.href='/tools/" + tool + "'"}
+                >
+                  {" "}
+                  {tool}
+                </u>
+              ))
           }
         </p>
 

@@ -86,13 +86,14 @@ console.log(tools);
         <h3 class="project-listing-tit le">{title}</h3>
         <p class="project-listing-desc">{desc}</p>
         {
-          tools.map((tool) => (
-            <img
-              class="tool-logo"
-              onclick={"location.href='/tools/" + tool + "'"}
-              src={"/logos/" + tool.toLowerCase() + ".svg "}
-            />
-          ))
+          tools &&
+            tools.map((tool) => (
+              <img
+                class="tool-logo"
+                onclick={"location.href='/tools/" + tool + "'"}
+                src={"/logos/" + tool.toLowerCase() + ".svg "}
+              />
+            ))
         }
       </div>
     </div>
