@@ -17,13 +17,13 @@ This was an assignment to make a responsive photo-display website. I decided to 
 
 _Because of the animations, and because the site is centered around being responsive, it's hard to truly show the site in photos._
 
-![](images/bootstrap_1.png)
-![](images/bootstrap_2.png)
-![](images/bootstrap_3.png)
-![](images/bootstrap_4.png)
-![](images/bootstrap_5.png)
-![](images/bootstrap_6.png)
-![](images/bootstrap_7.png)
-![](images/bootstrap_8.png)
-![](images/bootstrap_9.png)
-![](images/bootstrap_10.png)
+![](/images/bootstrap_1.png)
+![](/images/bootstrap_2.png)
+![](/images/bootstrap_3.png)
+![](/images/bootstrap_4.png)
+![](/images/bootstrap_5.png)
+![](/images/bootstrap_6.png)
+![](/images/bootstrap_7.png)
+![](/images/bootstrap_8.png)
+![](/images/bootstrap_9.png)
+![](/images/bootstrap_10.png)

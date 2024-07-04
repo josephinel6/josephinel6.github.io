@@ -14,7 +14,7 @@ This was my first attempt at working with APIs. I decided to create a simple pro
 It would make more sense for the user to input a location and go through a geocoding API to get the latitude and longitude, but there wasn't a good API I could set up without a key, which I could not use due to class restrictions.
 \
 \
-!["homepage"](images/weatherAPI_1.png)  
+!["homepage"](/images/weatherAPI_1.png)  
   
 The image above shows the homepage of the program. As you can see, there is a space for the user to input latitude and longitude. There is also an image background and a paintbrush icon in the bottom right corner that allows the user to change the background to another random image. This is done with the [Lorem Ipsum API](https://picsum.photos/), which allows you to put in parameters and returns a random image that fits the given height, width, etc. This API is used every time the page is loaded, as well as whenever the user clicks the paintbrush, allowing a random background to be displayed every time the site is accessed. The function for this is pretty simple:
   
@@ -27,7 +27,7 @@ function changebg() {
 \
 The following shows the weather actually being returned:  
 \
-![New Orleans Weather](images/weatherAPI_2.png)  
+![New Orleans Weather](/images/weatherAPI_2.png)  
 \
 As you can see, I opted for a pretty simple layout here, with just the weather in the center, a background, and a button to go back to the home screen (the x in the top left corner). Most of the code is as you'd expect:  
 
