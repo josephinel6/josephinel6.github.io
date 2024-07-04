@@ -1,7 +1,7 @@
 ---
 title: "Weather API"
 description: "First attempt at working with APIs"
-thumbnail: "images/weatherAPI_1.png"
+thumbnail: "/images/weatherAPI_1.png"
 tools: ["JavaScript", "HTML", "CSS"]
 tags: ["class-assignment", "archive"]
 link: "https://weatherapi.josephinemouse.repl.co/"
