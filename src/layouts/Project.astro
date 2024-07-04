@@ -122,55 +122,55 @@ const { frontmatter } = Astro.props;
   </head>
   <body>
     <BaseLayout>
-      <div id="wrapper">
-        <div id="project">
-          <div id="tags">
-            {
-              frontmatter.tags.map((tag) => (
-                <div class="tag" onclick={"location.href='/tags/" + tag + "'"}>
-                  {" "}
-                  {tag}{" "}
-                </div>
-              ))
-            }
-          </div>
-          <div style="text-align:center">
-            <!-- <img id="thumbnail" src={frontmatter.thumbnail} /> -->
-            <!-- <Image
+      <div id="project">
+        <div id="tags">
+          {
+            frontmatter.tags.map((tag) => (
+              <div class="tag" onclick={"location.href='/tags/" + tag + "'"}>
+                {" "}
+                {tag}{" "}
+              </div>
+            ))
+          }
+        </div>
+        <div style="text-align:center">
+          <!-- <img id="thumbnail" src={frontmatter.thumbnail} /> -->
+          <!-- <Image
               id="thumbnail"
               src={import(
                 "../../src/content/projects/" + frontmatter.thumbnail
               )}
               alt="Thumbnail"
             /> -->
-            <img src={"../../src/content/projects/" + frontmatter.thumbnail} />
-          </div>
-          <h1 id="title">{frontmatter.title}</h1>
+          <!-- <img src={"../../src/content/projects/" + frontmatter.thumbnail} /> -->
 
-          <p id="made-with">
-            Made with {
-              frontmatter.tools.map((tool) => (
-                <u
-                  class="tool-tag"
-                  onclick={"location.href='/tools/" + tool + "'"}
-                >
-                  {" "}
-                  {tool}
-                </u>
-              ))
-            }
-          </p>
+          <img src={frontmatter.thumbnail} />
+        </div>
+        <h1 id="title">{frontmatter.title}</h1>
 
-          <button
-            id="project-try-it"
-            onclick={"location.href'" + frontmatter.link + "'"}
-          >
-            Try It ↗</button
-          >
+        <p id="made-with">
+          Made with {
+            frontmatter.tools.map((tool) => (
+              <u
+                class="tool-tag"
+                onclick={"location.href='/tools/" + tool + "'"}
+              >
+                {" "}
+                {tool}
+              </u>
+            ))
+          }
+        </p>
 
-          <div id="content">
-            <slot class="slot" />
-          </div>
+        <button
+          id="project-try-it"
+          onclick={"location.href'" + frontmatter.link + "'"}
+        >
+          Try It ↗</button
+        >
+
+        <div id="content">
+          <slot class="slot" />
         </div>
       </div></BaseLayout
     >

@@ -1,7 +1,7 @@
 ---
 title: "Makeup API"
 description: "Simple makeup API"
-thumbnail: "./images/makeupAPI_7.png"
+thumbnail: "/project-images/makeup-api/makeupAPI_7.png"
 tools: ["JavaScript", "HTML"]
 tags: ["class-assignment", "archive"]
 link: "https://makeupapi.josephinemouse.repl.co/"
@@ -15,14 +15,14 @@ What I least liked about this website was the loading times. For every page, I h
 Some other cool features of the site include product displays listing prices and ratings, the ability to click into and see a more detailed description of each product, a direct link to buy the product from the product details page (given the website still exists), and previously the ability to sort products by brand through either selecting the brand from an array of options or by clicking on the brand on any display of the product. Below are a few screenshots of the site.
 
   
-![](/images/makeupAPI_1.png)
-![](/images/makeupAPI_2.png)
-![](/images/makeupAPI_3.png)
-![](/images/makeupAPI_4.png)
-![](/images/makeupAPI_5.png)
-![](/images/makeupAPI_6.png)
-![](/images/makeupAPI_7.png)
-![](/images/makeupAPI_8.png)
+![](/project-images/makeup-api/makeupAPI_1.png)
+![](/project-images/makeup-api/makeupAPI_2.png)
+![](/project-images/makeup-api/makeupAPI_3.png)
+![](/project-images/makeup-api/makeupAPI_4.png)
+![](/project-images/makeup-api/makeupAPI_5.png)
+![](/project-images/makeup-api/makeupAPI_6.png)
+![](/project-images/makeup-api/makeupAPI_7.png)
+![](/project-images/makeup-api/makeupAPI_8.png)
   
 
 If I were to go back and add to this site, I would add a proper home page, of course, as well as filters for each page (price, style, etc., so you can have _multiple_ filters for products) and an option to choose how many products you want to load per page. This would likely come with a page selector, but I could also just add a "load more" at the bottom of each page.

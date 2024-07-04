@@ -82,7 +82,7 @@ console.log(tools);
       <div class="nested" onclick={"location.href='" + url + "'"}>
         <!-- <Image src={images[img]()} alt="Thumbnail" /> -->
         <!-- <Image src={import("/src/content/projects/" + img)} alt="Thumbnail" /> -->
-        <img src={"/src/content/projects/" + img} />
+        <img src={img} />
         <h3 class="project-listing-tit le">{title}</h3>
         <p class="project-listing-desc">{desc}</p>
         {
@@ -90,7 +90,7 @@ console.log(tools);
             <img
               class="tool-logo"
               onclick={"location.href='/tools/" + tool + "'"}
-              src={"/logos/" + tool + ".svg "}
+              src={"/logos/" + tool.toLowerCase() + ".svg "}
             />
           ))
         }
