@@ -6,6 +6,7 @@ tools: ["JavaScript", "HTML", "CSS"]
 tags: ["hackathon"]
 link: "https://josephinel6.github.io/Hack-PNW-Spring-24/"
 slug: "name-it"
+date: 2024-02-13
 ---
 
 View source code [here](https://github.com/josephinel6/Hack-PNW-Spring-24).

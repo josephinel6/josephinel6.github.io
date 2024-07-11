@@ -6,6 +6,7 @@ tools: ["JavaScript", "HTML"]
 tags: ["class-assignment", "archive"]
 link: "https://makeupapi.josephinemouse.repl.co/"
 slug: "makeup-api"
+date: 2023-01-01
 ---
 
 Unfortunately, the API used for this project looks like it's no longer being maintained, so some links and products may not load/work properly. However, this project was still great practice for using JS to dynamically create and delete elements, and I especially enjoyed creating the search function to find products quickly.

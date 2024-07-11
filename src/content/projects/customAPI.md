@@ -6,6 +6,7 @@ tools: ["SQL", "HTML", "JavaScript", "CSS"]
 tags: ["class-assignment", "archive"]
 link: "https://sql-styled.josephinemouse.repl.co/"
 slug: "my-first-api"
+date: 2023-01-01
 ---
 
 This is from my web design class and was my first time working with databases for websites, which I'd been looking forward to since a previous quiz app project.

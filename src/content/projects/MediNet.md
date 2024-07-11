@@ -6,6 +6,7 @@ tools: ["figma"]
 tags: ["hackathon"]
 link: "https://www.figma.com/proto/E7X1hv2UrQp5TzY7OxsEi4/MediNet?node-id=0-1&t=hwTErTOMShBWdBnj-1"
 slug: "medi-net"
+date: 2024-07-09
 ---
 
 _"We connect people experiencing similar medical conditions so they can heal each other through friendship and advice."_

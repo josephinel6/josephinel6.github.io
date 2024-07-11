@@ -6,6 +6,7 @@ tools: ["JavaScript", "HTML", "CSS", "Bootstrap"]
 tags: ["class-assignment", "archive"]
 link: "https://responsivenessupload.josephinemouse.repl.co/"
 slug: "responsiveness-bootstrap"
+date: 2023-01-01
 ---
 
 This was an assignment to make a responsive photo-display website. I decided to take the opportunity to experiment with as many photo effects as I could. Unfortunately the photo editor didn't end up being very responsive, but I've used the basic idea of the photo editor in another project with plans to make it better.

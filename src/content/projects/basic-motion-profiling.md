@@ -3,6 +3,8 @@ title: "[Cross-Post] Basic Motion Profiling"
 description: "'Wiki' entry describing basic motion profiling, written originally for Orange Depot (formerly 847X-Robotics.github.io), 'a community-based hub of knowledge' for programming concepts in VEX Robotics Competition."
 thumbnail: "/project-images/basic-motion-profiling.png"
 tags: ["VRC", "writing"]
+tools: []
+date: 2024-02-07
 link: "https://orange-depot.github.io/posts/Basic-Motion-Profiling/"
 slug: "basic-motion-profiling"
 ---

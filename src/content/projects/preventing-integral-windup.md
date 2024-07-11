@@ -3,6 +3,8 @@ title: "[Cross-Post] Preventing Integral Windup"
 description: "'Wiki' entry describing methods to prevent integral windup, written originally for Orange Depot (formerly 847X-Robotics.github.io), 'a community-based hub of knowledge' for programming concepts in VEX Robotics Competition."
 thumbnail: "/project-images/preventing-integral-windup.png"
 tags: ["VRC", "writing"]
+tools: []
+date: 2024-02-09
 link: "https://orange-depot.github.io/posts/Preventing-Integral-Windup/"
 slug: "preventing-integral-windup"
 ---

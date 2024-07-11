@@ -3,6 +3,8 @@ title: "[Cross-Post] Slew Rate Control"
 description: "'Wiki' entry describing how to control slew rate in order to limit acceleration, written originally for Orange Depot (formerly 847X-Robotics.github.io), 'a community-based hub of knowledge' for programming concepts in VEX Robotics Competition."
 thumbnail: "/project-images/slew-rate-control.png"
 tags: ["VRC", "writing"]
+tools: []
+date: 2024-02-09
 link: "https://orange-depot.github.io/posts/Slew-Rate-Control/"
 slug: "slew-rate-control"
 ---
