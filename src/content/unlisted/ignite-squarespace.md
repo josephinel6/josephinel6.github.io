@@ -5,6 +5,7 @@ thumbnail: "/project-images/all-ignite/squarespace_1.png"
 tools: ["Squarespace"]
 # tags: ["test"]
 slug: "ignite-robotics-squarespace"
+date: 2024-01-14
 ---
 
 I lead a team of three in redesigning Ignite Robotics' website on Squarespace.

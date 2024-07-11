@@ -5,6 +5,8 @@ import { getCollection } from "astro:content";
 import ProjectListings from "../components/ProjectListings.astro";
 
 const projects = await getCollection("unlisted");
+
+projects.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 ---
 
 <html>
