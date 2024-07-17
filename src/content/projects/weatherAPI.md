@@ -3,7 +3,7 @@ title: "Weather API"
 description: "First attempt at working with APIs"
 thumbnail: "/project-images/weatherAPI_1.png"
 tools: ["JavaScript", "HTML", "CSS"]
-tags: ["class-assignment", "archive"]
+tags: ["class-assignment", "archive", "website", "front-end"]
 link: "https://weatherapi.josephinemouse.repl.co/"
 slug: "weather-api"
 date: 2023-01-01

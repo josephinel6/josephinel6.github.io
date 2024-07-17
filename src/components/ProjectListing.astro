@@ -79,13 +79,15 @@ console.log(tools);
     </style>
   </head>
   <body>
-    <div class="project-listing col">
+    <div class="">
       <div class="nested" onclick={"location.href='" + url + "'"}>
         <!-- <Image src={images[img]()} alt="Thumbnail" /> -->
         <!-- <Image src={import("/src/content/projects/" + img)} alt="Thumbnail" /> -->
-        <img src={img} />
-        <h3 class="project-listing-tit le">{title}</h3>
-        <p class="project-listing-desc">{desc}</p>
+        <div class="project-listing">
+          <img src={img} />
+          <h3 class="project-listing-tit le">{title}</h3>
+          <p class="project-listing-desc">{desc}</p>
+        </div>
         {
           tools &&
             tools.map((tool) => (
@@ -99,4 +101,5 @@ console.log(tools);
       </div>
     </div>
   </body>
+  <script></script>
 </html>

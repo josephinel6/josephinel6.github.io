@@ -3,7 +3,7 @@ title: "Name It"
 thumbnail: "/project-images/name-it/NameIt2.png"
 description: "Submission for Hack PNW 2024 & best functionality runner-up. Name memory game."
 tools: ["JavaScript", "HTML", "CSS"]
-tags: ["hackathon"]
+tags: ["hackathon", "website", "front-end"]
 link: "https://josephinel6.github.io/Hack-PNW-Spring-24/"
 slug: "name-it"
 date: 2024-02-13

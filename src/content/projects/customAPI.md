@@ -3,7 +3,7 @@ title: "My First API"
 description: "Simple makeup API"
 thumbnail: "/project-images/first-sql/firstSQL_1.png"
 tools: ["SQL", "HTML", "JavaScript", "CSS"]
-tags: ["class-assignment", "archive"]
+tags: ["class-assignment", "archive", "CRUD", "website", "fullstack"]
 link: "https://sql-styled.josephinemouse.repl.co/"
 slug: "my-first-api"
 date: 2023-01-01

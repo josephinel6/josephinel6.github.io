@@ -3,7 +3,7 @@ title: "Makeup API"
 description: "Simple makeup API"
 thumbnail: "/project-images/makeup-api/makeupAPI_7.png"
 tools: ["JavaScript", "HTML"]
-tags: ["class-assignment", "archive"]
+tags: ["class-assignment", "archive", "website", "front-end"]
 link: "https://makeupapi.josephinemouse.repl.co/"
 slug: "makeup-api"
 date: 2023-01-01
