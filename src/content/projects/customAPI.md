@@ -1,6 +1,6 @@
 ---
 title: "My First API"
-description: "Simple makeup API"
+description: "Simple website"
 thumbnail: "/project-images/first-sql/firstSQL_1.png"
 tools: ["SQL", "HTML", "JavaScript", "CSS"]
 tags: ["class-assignment", "archive", "CRUD", "website", "fullstack"]
