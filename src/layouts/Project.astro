@@ -121,7 +121,7 @@ const { frontmatter } = Astro.props;
     </style>
   </head>
   <body>
-    <BaseLayout>
+    <!-- <BaseLayout> -->
       <div id="project">
         <div id="tags">
           {
@@ -174,10 +174,11 @@ const { frontmatter } = Astro.props;
         <div id="content">
           <slot class="slot" />
         </div>
-      </div></BaseLayout
-    >
-    <script>
+      </div>
+      <!-- </BaseLayout
+    > -->
+    <!-- <script>
       import "../scripts/global.js";
-    </script>
+    </script> -->
   </body>
 </html>
