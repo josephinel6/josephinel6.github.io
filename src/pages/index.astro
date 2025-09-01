@@ -1,40 +1,56 @@
 ---
-import "../styles/index.css"
-import ProjectListings from "../components/ProjectListings.astro"
+import "../styles/index.css";
+import ProjectListings from "../components/ProjectListings.astro";
 import { getCollection } from "astro:content";
 
 const allProjects = await getCollection("projects");
 allProjects.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 ---
+
 <html>
-	<head>
-		<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-	  />
-	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"/>
-  
-	</head>
-	<body>
-	<div id="card">
-<img src="/assets/profile-cropped.jpg" id="mainphoto" />
-<h1 id="name"> Josephine</h1>
-<h3 id="subheading"> <i> University of Washington</i> </h3>
-<i class="social fab fa-github" id="github" onclick="location.href='www.github.com/josephinel6'" />
-<i class="social fa fa-envelope"onclick="location.href='mailto:mailjosephinel@gmail.com'" />
-<i class="social fab fa-linkedin"onclick="location.href='www.linkedin.com/in/josephine-li-90ba02324/'" />
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="card">
+      <img src="/assets/profile-cropped.jpg" id="mainphoto" />
+      <h1 id="name">Josephine</h1>
+      <h3 id="subheading"><i> CS @ University of Washington</i></h3>
+      <i
+        class="social fab fa-github"
+        id="github"
+        onclick="location.href='www.github.com/josephinel6'"></i>
+      <i
+        class="social fa fa-envelope"
+        onclick="location.href='mailto:mailjosephinel@gmail.com'"></i>
+      <i
+        class="social fab fa-linkedin"
+        onclick="location.href='www.linkedin.com/in/josephine-li-90ba02324/'"
+      ></i>
 
-<div class="horizontal-line"></div>
+      <div class="horizontal-line"></div>
 
+      <img
+        class="award"
+        onclick="location.href='www.aspirations.org/people/josephine-l/134641'"
+        src="/assets/ncwit.png"
+      />
 
-<img class="award" onclick="location.href='www.aspirations.org/people/josephine-l/134641'" src="/assets/ncwit.png"></img>
+      <div class="horizontal-line"></div>
+      <div id="posts">
+        <!-- <h2> My Work </h2> -->
+        <h3 id="my-work-heading">My work</h3>
+        <ProjectListings projects={allProjects} />
+      </div>
 
-<div id="posts">
-<!-- <h2> My Work </h2> -->
-<div class="horizontal-line"></div>
-<h3 id="my-work-heading"> My work </h3>
-<ProjectListings projects={allProjects}/>
-</div>
-</div>
-</body>
+      <div style="height: 20vh; width:20vw;"></div>
+    </div>
+  </body>
 </html>
