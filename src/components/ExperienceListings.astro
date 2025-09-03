@@ -1,0 +1,25 @@
+---
+import ExperienceListing from "./ExperienceListing.astro";
+
+const { experiences } = Astro.props;
+---
+
+<html lang="en">
+  <head> </head>
+  <body>
+    <div id="main-content">
+      {
+        experiences.map((experience) => (
+          <ExperienceListing
+            position={experience.data.position}
+            company={experience.data.company}
+            start={experience.data.start}
+            end={experience.data.end}
+            desc={experience.data.description}
+            link={experience.data.link}
+          />
+        ))
+      }
+    </div>
+  </body>
+</html>

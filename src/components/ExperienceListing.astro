@@ -1,0 +1,45 @@
+---
+const { position, company, desc, start, end, link } = Astro.props;
+console.log("Experience:" + JSON.stringify(Astro.props));
+console.log("POsition:" + position);
+console.log("Company" + company);
+const startAsDate = new Date(start);
+const startDate =
+  startAsDate.toLocaleString("default", { month: "long" }) +
+  " " +
+  startAsDate.getFullYear();
+console.log(link);
+const endAsDate = new Date(end);
+const endDate =
+  endAsDate >= new Date()
+    ? "present"
+    : endAsDate.toLocaleString("default", { month: "long" }) +
+      " " +
+      endAsDate.getFullYear();
+---
+
+<html>
+  <body>
+    <div style="width: 100%">
+      <p style="display: inline-block; margin-bottom: 0; font-size: 1em">
+        <b>{position}</b> / {
+          link ? (
+            <a style="color:black" href={link}>
+              {company}
+            </a>
+          ) : (
+            company
+          )
+        }
+      </p>
+      <!-- <p
+        style="float: right; display: inline-block; font-size: 0.8em; margin-top:0.1em"
+      > -->
+      <p style="font-size: 0.8em; margin-bottom: 0.2em">
+        {startDate} - {endDate}
+      </p>
+
+      <p style="font-size: 0.93em; margin-bottom: 1.1em">{desc}</p>
+    </div>
+  </body>
+</html>

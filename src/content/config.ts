@@ -24,8 +24,21 @@ const unlistedCollection = defineCollection({
   }),
 });
 
+const experienceCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    position: z.string(),
+    description: z.string(),
+    company: z.string(),
+    start: z.date(),
+    end: z.date(),
+    link: z.string().optional(),
+  }),
+});
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   projects: projectsCollection,
   unlistedProjects: unlistedCollection,
+  experience: experienceCollection,
 };

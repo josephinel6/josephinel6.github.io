@@ -2,13 +2,18 @@
 import "../styles/index.css";
 import ProjectListings from "../components/ProjectListings.astro";
 import { getCollection } from "astro:content";
+import ExperienceListings from "../components/ExperienceListings.astro";
 
 const allProjects = await getCollection("projects");
 allProjects.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
+const allExperience = await getCollection("experience");
+allExperience.sort((a, b) => Date.parse(b.data.end) - Date.parse(a.data.end));
 ---
 
 <html>
-  <head>
+  <head
+    ><meta charset="UTF-8" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -37,6 +42,12 @@ allProjects.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
       <div class="horizontal-line"></div>
 
+      <div>
+        <ExperienceListings experiences={allExperience} />
+      </div>
+
+      <div class="horizontal-line"></div>
+
       <img
         class="award"
         onclick="location.href='www.aspirations.org/people/josephine-l/134641'"
@@ -46,7 +57,7 @@ allProjects.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
       <div class="horizontal-line"></div>
       <div id="posts">
         <!-- <h2> My Work </h2> -->
-        <h3 id="my-work-heading">My work</h3>
+        <h3 id="my-work-heading">Additional Projects</h3>
         <ProjectListings projects={allProjects} />
       </div>
 
