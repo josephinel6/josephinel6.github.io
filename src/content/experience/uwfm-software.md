@@ -1,6 +1,7 @@
 ---
 position: "Software/Firmware Team Member"
-description: "Software engineer on UW’s FSAE team, working on custom telemetry system that hosts a local network for live data visualization via Grafana dashboards, as well as local logging for in-depth post-drive analysis."
+description: "Enhanced custom telemetry system providing live data visualization & in-depth logging for post-drive analysis."
+descPoints: "Transitioned communication from TCP to UDP for a 70% decrease in data transfer time|Automated scripts, time-setting, and data logging based on car state, reducing need for intervention|Collaborated with electrical team member to debug and set up custom hardware for telemetry"
 company: "UW Formula Motorsports"
 start: 2024-09-01
 end: 3000-01-01
