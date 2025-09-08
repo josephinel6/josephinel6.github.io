@@ -1,8 +1,8 @@
 ---
-position: "Software Engineering Intern"
-descPoints: "Created and implemented thorough testing strategy for Gemini-powered GenAI Assertions|Increased GenAI assertion accuracy by ~4.347% and decreased cost per assertion by 33%|Improved logging system in API to streamline future testing"
+position: "AI Software Engineering Intern"
+description: "Worked as part of the AI-focused team. Created and implemented a thorough testing strategy for a generative AI feature and handled additional tasks such as improving logging and porting an endpoint form Java to TypeScript."
 company: "mabl"
 link: "https://www.mabl.com/"
 start: 2025-06-01
-end: 3000-01-01
+end: 2025-09-12
 ---
