@@ -20,8 +20,8 @@ const endDate =
 
 <html>
   <body>
-    <div style="width: 100%">
-      <p style="display: inline-block; margin-bottom: 0; font-size: 0.98em">
+    <div style="width: 100%; margin-top: 0.85em">
+      <p style="display: inline-block; margin-bottom: 0; font-size: 0.98em;">
         <b>{position}</b> / {
           link ? (
             <a style="color:black" href={link}>
@@ -42,7 +42,7 @@ const endDate =
       {desc && <p style="font-size: 0.9em; margin-bottom: 0">{desc}</p>}
       {
         descPoints && (
-          <ul style="font-size: 0.9em; margin-left: 0">
+          <ul style="font-size: 0.9em; margin-left: 0; margin-bottom: 0">
             {descPoints.split("|").map((item) => (
               <li> {item} </li>
             ))}
