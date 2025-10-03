@@ -158,3 +158,20 @@ h2 {
 #project > img {
   width: 30%;
 }
+
+.publication-listing {
+  margin-top: 0.85em;
+}
+
+.publication-link {
+  margin-top: 0;
+  font-size: 0.75em;
+  color: black;
+  /* text-decoration: none; */
+  margin-left: 1.5vw;
+}
+
+.publication-authors {
+  margin-bottom: -0.2em;
+  margin-left: 1.5vw;
+}
